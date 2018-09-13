@@ -34,8 +34,8 @@ def leadranking_preprocess(config,lead):
                                                                            axis=1)
     _df["Is_pref_start_date_given"] = ~_df["po_prefered_start_date1"].isnull()
 
-    _selected_fields = ['Is_telephoneno_given', 'Is_pref_start_date_given', 'LeadSubCategory', 'LeadSource',
-                        'LeadCategory', 'Is_mobileno_given', 'DND_Count',
+    _selected_fields = ['LeadCategory', 'LeadSource',\
+                        'LeadSubCategory', 'Is_mobileno_given', 'DND_Count',\
                         ]
     _df = _df[_selected_fields]
     print('Transformed df \n')
